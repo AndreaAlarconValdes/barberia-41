@@ -1,42 +1,80 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 102px;
+  font-weight: 400;
+  letter-spacing: -2px;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 36px;
+  letter-spacing: 1px;
+  word-spacing: 14px;
+  text-transform: uppercase;
+  border-bottom: 5px solid;
+  border-image: linear-gradient(to right, #d8a784 20%, transparent 0%) 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+p {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+  margin: 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+a {
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+}
+
+@keyframes enhance-header {
   to {
-    transform: rotate(360deg);
+    background-color: rgba(0, 0, 0, 0.549);
+    backdrop-filter: blur(5px);
+    color: white;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@keyframes fadeBackground {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  10%,
+  50% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
   }
 }
 
-.card {
-  padding: 2em;
-}
+@keyframes bgScroll {
+  0% {
+    background-position: center top;
+  }
 
-.read-the-docs {
-  color: #888;
+  100% {
+    background-position: center bottom;
+  }
 }
