@@ -11,7 +11,7 @@ const Home = () => {
       <div className="about-home">
         <div className="about-description-home">
           <h2>Sobre drew</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, laboriosam officia saepe alias accusantium repudiandae, minus suscipit ea perferendis reprehenderit iure, quas maxime nihil cumque quisquam nulla architecto blanditiis praesentium! </p>
+          <p>En nuestra barbería, combinamos la tradición con las últimas tendencias para ofrecer cortes de calidad, afeitados clásicos y una atención personalizada. Más que un corte, buscamos que cada visita sea una experiencia.</p>
         </div>
         <div className="about-img-home">
           <img src="./barber.jpg" alt="" />
@@ -32,21 +32,19 @@ const Home = () => {
         </div>
       </div>
       <div className="img-divisor">
-        <h2>Todo lo que necesitas</h2>
+        <h2>Los productos que utilizamos</h2>
         <p>Lo hacemos todo, y lo hacemos perfecto.</p>
       </div>
-      <div className="services-home">
-        <h2>Servicios</h2>
         <div className="services-list">
+        <h2>Servicios</h2>
           {servicesArray.map((item) => (
-            <div className="service-item" key={item.title}>
+            <div className="service-item" key={item.id}>
               <img src={item.imgSrc} alt="" width={100} />
               <h3>{item.title}</h3>
               <p>{item.description}</p>
             </div>
           ))}
         </div>
-      </div>
     </>
   )
 }
