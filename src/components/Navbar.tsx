@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${menuOpen ? "menu-open" : ""}`}>
       <div className="navbar-logo">
-        <Link to="/" onClick={closeMenu}>
+        <Link to="home" onClick={closeMenu} smooth={true} duration={500}>
           <span className="logo-name">DR<span className="logo-letter">E</span>W</span>
         </Link>
       </div>
@@ -27,21 +27,21 @@ const Navbar = () => {
         <span />
       </button>
       <div className={`navbar-routes ${menuOpen ? "open" : ""}`}>
-        <Link to="/" onClick={closeMenu}>
+        <Link to="home" onClick={closeMenu} smooth={true} duration={500} spy activeClass="active-link">
           inicio
         </Link>
-        <Link to="/about" onClick={closeMenu}>
+        <Link to="about" onClick={closeMenu}  smooth={true} duration={500} spy={true} activeClass="active-link">
           conóceme
         </Link>
-        <Link to="/services" onClick={closeMenu}>
+        <Link to="services" onClick={closeMenu}  smooth={true} duration={500} spy={true} activeClass="active-link">
           servicios
         </Link>
-        <Link to="/contact" onClick={closeMenu}>
+        <Link to="contact" onClick={closeMenu} smooth={true} duration={500} spy={true} activeClass="active-link">
           contacto
         </Link>
-        <a href="" className="booking-btn">
+        <button className="booking-btn">
           <FontAwesomeIcon icon={faPhone} size="sm"/>
-          Reservar cita</a>
+          Reservar cita</button>
       </div>
     </nav>
   );
