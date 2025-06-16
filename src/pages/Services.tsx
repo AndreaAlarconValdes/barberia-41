@@ -23,35 +23,28 @@ const Services = () => {
                     </div>
                 </div>
             </div>
-            <div className="services-list" >
+            <div className='services'>
                 <div className='services-title'>
                     <h2>Servicios</h2>
                     <p>Descubre todos los servicios que ofrecemos para cuidar tu imagen y resaltar tu estilo.</p>
                 </div>
-                {servicesArray.map((item) => (
-                    <div className="service-item" key={item.id}>
-                        <img src={item.imgSrc} alt="" width={100} />
-                        <h3>{item.title}</h3>
-                        <p>{item.description}</p>
-                        <span>{item.price}€</span>
-                    </div>
-                ))}
+                <div className="services-list" >
+                    {servicesArray.map((item) => (
+                        <div className="service-item" key={item.id}>
+                            <img src={item.imgSrc} alt="img"  />
+                            <h3>{item.title}</h3>
+                            <p>{item.description}</p>
+                            <span>{item.price}€</span>
+                        </div>
+                    ))}
+                </div>
             </div>
-            <div className="products-slider-container">
+            <div className="products-container">
                 <img className="products-slider-img" src='./american-crew-logo.png' />
-                <div className="products-slider-card">
-                    <img className="products-slider-img" src='./proraso-logo.png' />
-                </div>
-                <div className="products-slider-card">
-                    <img className="products-slider-img" src='./carobels-logo.jpg' />
-                </div>
-
-                <div className="products-slider-card">
-                    <img className="products-slider-img" src='./suavecito-logo.png' />
-                </div>
-                <div className="products-slider-card">
-                    <img className="products-slider-img" src='./babylisspro-logo.png' />
-                </div>
+                <img className="products-slider-img" src='./proraso-logo.png' />
+                <img className="products-slider-img" src='./carobels-logo.jpg' />
+                <img className="products-slider-img" src='./suavecito-logo.png' />
+                <img className="products-slider-img" src='./babylisspro-logo.png' />
 
             </div>
 
